@@ -9,10 +9,10 @@ import ReactFlow, {
   Handle,
 } from 'reactflow';
 import 'reactflow/dist/style.css';
-import EntityRelationshipNode from './Nodes/EntityRelationshipNode';
+import EntityRelationshipNode from '../Nodes/EntityRelationshipNode';
 import { useMemo } from 'react';
-import { initialEdges, initialNodes } from './Data/initial_data';
-const App = () => {
+import { initialEdges, initialNodes } from '../Data/initial_data';
+const home = () => {
     const [nodes, setNodes, onNodesChange] = useNodesState(initialNodes);
     const [edges, setEdges, onEdgesChange] = useEdgesState(initialEdges);
     const [nodeCount, setNodeCount] = useState(3); // To keep track of the node count for unique IDs
@@ -61,4 +61,4 @@ const App = () => {
   )
 }
 
-export default App
+export default home
