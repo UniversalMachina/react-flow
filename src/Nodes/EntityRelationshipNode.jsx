@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Handle } from "reactflow";
 import uniqueId from "lodash/uniqueId"; // Ensure lodash is installed or use an alternative method for unique IDs
 
-const EntityRelationshipNode = ({ data }) => {
+const EntityRelationshipNode = ({  id, data, updateAttributes  }) => {
   const [attributes, setAttributes] = useState([
     { id: uniqueId("attr_"), name: "", type: "" },
   ]);
@@ -10,6 +10,10 @@ const EntityRelationshipNode = ({ data }) => {
 
   const [showAttributes, setShowAttributes] = useState(false);
 
+// Inside EntityRelationshipNode component
+useEffect(() => {
+  updateAttributes(id, attributes, title);
+}, [attributes, title, id, updateAttributes]); // Add title as a dependency
 
 
 
