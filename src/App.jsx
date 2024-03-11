@@ -37,7 +37,7 @@ const App = () => {
         handleAttributeNameChange={handleAttributeNameChange}
         handleAttributeTypeChange={handleAttributeTypeChange}
       />
-      <button onClick={() => addNode("left")}>Add Node</button>
+            <button className="bg-white p-4 rounded-lg" onClick={() => addNode('left')} style={{ position: 'absolute', left: '10px', top: '50px', zIndex: 100 }}>Add Node</button>
       <ReactFlow
         nodes={nodes}
         edges={edges}

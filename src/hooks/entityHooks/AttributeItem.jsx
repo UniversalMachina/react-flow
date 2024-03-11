@@ -17,8 +17,8 @@ const AttributeItem = ({ attribute, index, handleAttributeChange, removeAttribut
       className="text-white bg-gray-600 mr-2 p-1 rounded w-[100px] outline-none"
       placeholder="Type"
     />
-    <Handle type="target" position="left" id={`${attribute.id}_left`} style={{ background: '#555' }} />
-    <Handle type="source" position="right" id={`${attribute.id}_right`} style={{ background: '#555' }} />
+    <Handle type="target" position="left" id={`${attribute.id}_left`} style={{ background: '#555', top: 70 + index * 49 }} />
+    <Handle type="source" position="right" id={`${attribute.id}_right`} style={{ background: '#555' , top: 70 + index * 49}} />
     <button onClick={() => removeAttribute(attribute.id)} className="bg-red-500 hover:bg-red-700 text-white font-bold py-1 px-2 rounded">
       −
     </button>
